@@ -50,6 +50,23 @@ python src/entry_analysis.py outputs/pose_data.json data/calibration/calibration
 ```
 
 ## Project structure
+```
+dive-analysis/
+├── data/
+│   ├── raw/            # input video clips go here
+│   └── calibration/    # reference measurements (pixel-to-meter, water line)
+├── src/
+│   ├── pose_extraction.py   # Step 1-2: video load + MediaPipe pose
+│   ├── plot_trajectories.py # Step 2 checkpoint: visualize trajectories
+│   ├── calibration.py       # Step 3: pixel-to-meter + water line calibration
+│   ├── metrics.py           # Step 4-5: takeoff frame + takeoff velocity
+│   ├── entry_analysis.py    # Step 6-7: entry frame + entry angle
+│   └── splash_analysis.py   # Step 8: splash radius (frame-to-frame diffing)
+├── outputs/             # cached pose data, plots, results
+├── main.py              # pipeline entry point
+└── requirements.txt
+```
+
 
 ## Known limitations
 - **Splash radius accuracy is depth-dependent.** Calibration uses a single
