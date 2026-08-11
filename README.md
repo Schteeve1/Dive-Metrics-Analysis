@@ -50,3 +50,16 @@ python src/entry_analysis.py outputs/pose_data.json data/calibration/calibration
 ```
 
 ## Project structure
+
+## Known limitations
+- **Splash radius accuracy is depth-dependent.** Calibration uses a single
+  meters-per-pixel scale factor from one reference measurement (e.g. lane
+  rope width at one point in the frame). Because of camera perspective, the
+  same real-world distance covers fewer pixels the farther it is from the
+  camera -- so this scale factor is only strictly accurate at the depth it
+  was measured at. If the splash occurs at a different depth in the pool
+  than the calibration reference, reported splash radius will be biased
+  (observed: visually cross-checking splash extent against the 5m lane
+  rope suggested the reported value was an underestimate). A proper fix
+  requires a homography-based perspective correction rather than a single
+  scalar conversion factor.
