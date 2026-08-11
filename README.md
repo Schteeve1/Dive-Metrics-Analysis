@@ -6,6 +6,10 @@ velocity, reaction time, entry angle, and splash radius.
 
 v1 scope: takeoff velocity, entry angle, splash radius, reaction time.
 
+## Roadmap
+- [ ] Step 9: Reaction time (audio start signal + first movement) — shelved,
+      most footage doesn't include an audible starter signal
+
 ## Setup
 
 ```bash
