@@ -1,0 +1,8 @@
+{
+  "video_path": "data\\raw\\test2.mp4",
+  "calibration_frame_idx": 0,
+  "known_length_m": 5.0,
+  "reference_pixel_distance": 1385.907644830636,
+  "meters_per_pixel": 0.0036077440070770533,
+  "water_line_angle_rad": -0.06957393507057026
+}

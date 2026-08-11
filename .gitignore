@@ -1,0 +1,6 @@
+venv/
+__pycache__/
+*.pyc
+outputs/*.json
+outputs/*.png
+data/raw/*.mp4
