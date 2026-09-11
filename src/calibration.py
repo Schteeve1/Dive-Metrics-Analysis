@@ -110,6 +110,8 @@ def run_calibration(video_path: str, known_length_m: float, frame_idx: int = 0,
                 "reference_pixel_distance": pixel_distance,
                 "meters_per_pixel": meters_per_pixel,
                 "water_line_angle_rad": water_line_angle_rad,
+                "water_line_p1": clicked_points[2],
+                "water_line_p2": clicked_points[3],
             }
 
             os.makedirs(os.path.dirname(out_path), exist_ok=True)
